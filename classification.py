@@ -2,13 +2,15 @@ import keras
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D
 
-batch_size = 128
-num_dogs = 10
-epochs = 10
+
+# Determine training and testing sizes
+# batch_size = 128
+# num_dogs = 10
+# epochs = 10
 
 img_rows, img_cols = 28, 28
 
-(x_train, y_train), (x_test, y_test) = mnist.load_data()
+(x_train, y_train), (x_test, y_test) = # Determine how this will connect
 
 x_train = x_train.reshape(60000, 28, 28, 1)
 x_test = x_test.reshape(10000, 28, 28, 1)
@@ -48,3 +50,6 @@ model.fit(x_train, y_train,
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
+
+# Change output to display input testing image and breed label
+# Add classification label table
